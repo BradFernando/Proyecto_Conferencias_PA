@@ -1,0 +1,52 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Participante {
+  codigo_participante  String @id @default(auto()) @map("_id") @db.ObjectId
+  nombres         String
+  apellidos       String
+  cedula          Int
+  email          String
+  telefono        Int
+  doi            String
+  area           String
+  tema           String
+  participacion String
+  descuento  Float
+  totalAPagar Float
+  fecha_registro DateTime @default(now())
+  estado         Boolean @default(false)
+  pago ParticipantePago?
+}
+
+model ParticipantePago {
+  codigo_pago String @id @default(auto()) @map("_id") @db.ObjectId
+  codigo_participante String? @unique @db.ObjectId
+  fecha_pago DateTime @default(now())
+  monto_pago Float
+  direccion_pago String
+  postal_pago Int
+  comprobante_pago String
+  estado_pago Boolean @default(false)
+  participante Participante? @relation(fields: [codigo_participante], references: [codigo_participante])
+}
+
+model User {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  username String @unique
+  password String
+  roleId   String @db.ObjectId
+  role     Role   @relation(fields: [roleId], references: [id])
+}
+
+model Role {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String @unique
+  users  User[]
+}

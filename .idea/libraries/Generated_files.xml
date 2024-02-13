@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app.js" />
+        <item url="file://$PROJECT_DIR$/controllers/mailRest.js" />
+        <item url="file://$PROJECT_DIR$/routes/mail.js" />
+        <item url="file://$PROJECT_DIR$/routes/participantes.js" />
+        <item url="file://$PROJECT_DIR$/routes/users.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app.js" />
+      <root url="file://$PROJECT_DIR$/controllers/mailRest.js" />
+      <root url="file://$PROJECT_DIR$/routes/mail.js" />
+      <root url="file://$PROJECT_DIR$/routes/participantes.js" />
+      <root url="file://$PROJECT_DIR$/routes/users.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

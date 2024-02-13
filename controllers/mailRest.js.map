@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "mailRest.js",
+  "sourceRoot": "\\",
+  "sources": [
+    "mailRest.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAyB;EAAA;;AAAA",
+  "sourcesContent": [
+    "# controllers/mailRest.js\r\n"
+  ]
+}
